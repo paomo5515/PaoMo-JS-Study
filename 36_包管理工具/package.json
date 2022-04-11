@@ -1,0 +1,17 @@
+{
+  "name": "npmdemo",
+  "version": "1.0.0",
+  "description": "a npm test demmo",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "paomo",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.72.0"
+  }
+}
