@@ -19,7 +19,7 @@ console.log(jsonString1)
 const jsonString2 = JSON.stringify(obj, ["name", "friends"])
 console.log(jsonString2)  // {"name":"obj","friends":{"name":"jerry"}}
 
-// 2.1 传入回掉函数
+// 2.1 传入回调函数
 const jsonString3 = JSON.stringify(obj, (key, value) => {
   if (key === "age") {
     return value + 1  // 将 age 属性 +1 

@@ -23,3 +23,4 @@ const jsonString = localStorage.getItem("obj")
 // 将 JSON 格式的字符串转回对象
 const info = JSON.parse(jsonString)
 console.log(info)
+// 1.43.48
