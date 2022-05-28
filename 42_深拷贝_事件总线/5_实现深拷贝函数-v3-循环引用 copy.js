@@ -5,7 +5,7 @@ function isObject(value) {
 
 
 
-function deepClone(originValue, map = new Map()) {
+function deepClone(originValue, map = new WeakMap()) {
 
   // 判断是否是一个 Set 类型
   if (originValue instanceof Set) {
