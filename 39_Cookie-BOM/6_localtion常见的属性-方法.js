@@ -14,4 +14,4 @@ console.log(location.protocol)
 // 没有回退
 location.replace("http://www.baidu.com")
 // 重新加载
-location.reload(true)
+// location.reload(true)

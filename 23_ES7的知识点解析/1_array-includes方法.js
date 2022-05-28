@@ -5,7 +5,7 @@ if (names.indexOf("bbb") !== -1) {
 }
 
 // ES7 (ES2016)
-// 第个参数是 开始的位置
+// 第二个参数是 开始的位置
 if (names.includes("bbb", 1)) {
   console.log("包含 bbb 元素") // 包含 bbb 元素
 }

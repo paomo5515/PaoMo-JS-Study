@@ -6,7 +6,7 @@
         对于常用的 start、test、stop、restart可以省略掉 run直接通过 npm start等方式运行；
 
     dependencies属性
-      dependencies属性是指定无论开发者哈市生产环境都需依赖的包；
+      dependencies属性是指定无论开发者还是生产环境都需依赖的包；
       通常是我们项目实际开发用到的一些库模块vue、vuex、vue-router、react、react-dom、axios等等；
       与之对象的是 devDependencies;
     devDependencies属性

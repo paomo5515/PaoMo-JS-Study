@@ -39,7 +39,6 @@ new Promise(function (resolve) {
 
 /*
 promise1
-2
 then1
 queueMicrotask1
 then3
