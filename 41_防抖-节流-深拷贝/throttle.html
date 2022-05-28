@@ -42,8 +42,8 @@
     })
 
     // 通过 Promise 拿到返回值
-    const tempCallback = () => {
-      _throttle().then(res => {
+    const tempCallback = (...args) => {
+      _throttle.apply(inputEl, args).then(res => {
         console.log("Promis", res)
       })
     }
