@@ -21,3 +21,4 @@ aEl.addEventListener("click", (event) => {
 
 // stopPropagation
 // 阻止事件传递 见 06 的代码
+//2.18.04

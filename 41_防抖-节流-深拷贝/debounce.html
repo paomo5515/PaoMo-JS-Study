@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text">
+  <button id="cancel">取消</button>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.3/underscore-umd-min.js"></script> -->
+
+  <!-- <script src="./3_debounce-v1-基本实现.js"></script> -->
+  <!-- <script src="./4_debounce-v2-实现-this-参数.js"></script> -->
+  <!-- <script src="./5_debounce-v3-立即执行.js"></script> -->
+  <!-- <script src="./6_debounce-v4-取消功能.js"></script> -->
+  <script src="./7_debounce-v5-函数返回值.js"></script>
+  <script>
+    const inputEl = document.querySelector("input")
+    let counter = 0
+
+    const inputChange = function (event) {
+      console.log(`发送了，第${++counter}网络请求`, this, event)
+
+      // 返回值
+      return "aaaa"
+    }
+
+    // 防抖处理
+    // inputEl.oninput = _.debounce(inputChange, 2000)
+    // inputEl.oninput = debounce(inputChange, 2000)
+
+    const debounceChange = debounce(inputChange, 2000, false, (res) => {
+      console.log("拿到真正执行函数的返回值，返回值是:", res)
+    })
+
+    const tempCallback = () => {
+      debounceChange().then((res) => {
+        console.log("Promise返回值结果", res)
+      })
+    }
+    // 没使用 Promise 获取返回值
+    // inputEl.oninput = debounceChange
+
+    // 使用 Promise获取返回值
+    inputEl.oninput = tempCallback
+
+    // 节流处理
+    // inputEl.oninput = _.throttle(inputChange, 2000)
+
+    // 取消功能
+    const cancelBtn = document.querySelector("#cancel")
+    cancelBtn.onclick = function () {
+      debounceChange.cancel()
+    }
+
+  </script>
+</body>
+
+</html>
