@@ -38,7 +38,7 @@ obj2.eating()
 obj2.running()
 
 var fn = obj2.eating
-fn() // this是 weindow
+fn() // this是 window
 
 
 // 案例三
@@ -53,4 +53,3 @@ var obj4 = {
   bar: obj3.foo
 }
 obj4.bar() // obj4
-// 0.36.04
