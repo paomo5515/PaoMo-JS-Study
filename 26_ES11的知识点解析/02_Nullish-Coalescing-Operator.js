@@ -1,4 +1,5 @@
-// 空值合并运算，是一种运算符
+// 空值合并运算（??），是一个逻辑操作符，当操作符的左侧是 null 或者 undefined时，
+// 返回其右侧操作数，否则返回左侧操作数
 
 const foo = undefined
 const bar = foo || "default value"
