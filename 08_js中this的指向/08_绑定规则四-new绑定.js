@@ -11,14 +11,14 @@
 // 这个绑定过程就是 new 绑定
 
 function Person(name, age) {
-  this.name = name,
-    this.age = age
+  this.name = name;
+  this.age = age;
 }
 
-var p1 = new Person("hello", 12)
+var p1 = new Person("hello", 12);
 // 相当于把 this对象 = "hello",12
 // 通过 new 里面也会有一个 this
 console.log(p1.name, p1.age);
 // 第二次调用会在内部  再创建一个新的对象，然后把新的对象  赋值给 this
-var p2 = new Person("word", 13)
+var p2 = new Person("word", 13);
 console.log(p2.name, p2.age);
